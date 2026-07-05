@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emarni Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-screen" class="container active">
+        <h1 class="brand-title">Emarni</h1>
+        <p>Connect with your friends instantly.</p>
+        <div class="input-group">
+            <input type="text" id="username-input" placeholder="Enter a unique username..." autocomplete="off">
+            <button onclick="joinApp()">Join</button>
+        </div>
+        <p id="error-msg" class="error"></p>
+    </div>
+
+    <div id="chat-screen" class="container hidden">
+        <div class="header">
+            <h2 class="brand-title">Emarni</h2>
+            <span id="display-username">User</span>
+        </div>
+        
+        <div class="chat-box" id="chat-box">
+            <div class="message received">
+                <span class="sender">System</span>
+                <p>Welcome to Emarni! Send a friend request to start chatting.</p>
+            </div>
+        </div>
+
+        <div class="input-group chat-input">
+            <input type="text" id="message-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
