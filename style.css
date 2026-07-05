@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e003b, #4a0072);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.brand-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, #ff007f, #ff7bc1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+/* Animations */
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ff007f33; }
+    to { text-shadow: 0 0 20px #ff007f; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.active {
+    display: block;
+    animation: fadeIn 0.8s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.input-group {
+    display: flex;
+    margin-top: 20px;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+input::placeholder {
+    color: #ddd;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    background: #ff007f;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d6006b;
+}
+
+.error {
+    color: #ff4d4d;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+/* Chat Screen Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.chat-box {
+    height: 300px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 5px;
+}
+
+.message {
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 80%;
+    text-align: left;
+    animation: fadeIn 0.4s ease;
+}
+
+.received {
+    background: rgba(255, 255, 255, 0.2);
+    align-self: flex-start;
+}
+
+.sent {
+    background: #ff007f;
+    align-self: flex-end;
+}
+
+.sender {
+    font-size: 0.7rem;
+    font-weight: bold;
+    color: #ffbc00;
+    display: block;
+    margin-bottom: 3px;
+}
